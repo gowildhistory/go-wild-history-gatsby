@@ -21,7 +21,13 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
       },
     },
-    "gatsby-theme-contentful-blog",
+    {
+      resolve: "gatsby-theme-contentful-blog",
+      options: {
+        postPath: "src/templates/blog-post",
+        indexPath: "src/templates/blog-index",
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
@@ -33,8 +39,8 @@ module.exports = {
         short_name: "Gatsby",
         start_url: "/",
         // These can be imported once ESM support lands
-        background_color: "#ffe491",
-        theme_color: "#004ca3",
+        background_color: "#ffffff",
+        theme_color: "#735624",
         icon: "src/favicon.png",
       },
     },
